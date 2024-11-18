@@ -1,4 +1,43 @@
-package PACKAGE_NAME;
+public class Line { //Определение класса
+    private Point start;
+    private Point end;
 
-public class Line {
+    //Конструктор
+    public Line(Point start, Point end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public Line(int x1, int y1, int x2, int y2) {
+        this.start = new Point(x1, y1);
+        this.end = new Point(x2, y2);
+    }
+
+    //Методы-сеттеры и геттеры
+    //Сеттеры позволяют изменять значения переменных экземпляра, а геттеры - получать эти значения
+    public void setStart(Point start) {
+        this.start = start;
+    }
+    public void setEnd(Point end) {
+        this.end = end;
+    }
+    public Point getStart() {
+        return start;
+    }
+    public Point getEnd() {
+        return end;
+    }
+
+    //Метод getLength()
+    public int getLength() {
+        double dx = end.getX() - start.getX();
+        double dy = end.getY() - start.getY();
+        return (int) Math.sqrt(dx * dx + dy * dy);
+    }
+
+    //Метод toString()
+    @Override
+    public String toString() {
+        return "Линия от " + start + " до " + end;
+    }
 }
