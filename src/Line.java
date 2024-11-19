@@ -13,8 +13,8 @@ public class Line { //Определение класса
         this.end = new Point(x2, y2);
     }
 
-    //Методы-сеттеры и геттеры
-    //Сеттеры позволяют изменять значения переменных экземпляра, а геттеры - получать эти значения
+    //сеттеры и геттеры
+    //Геттер просто возвращает значение свойства, а сеттер его меняет.
     public void setStart(Point start) {
         this.start = start;
     }
@@ -36,7 +36,6 @@ public class Line { //Определение класса
     }
 
     //Метод toString()
-    @Override
     public String toString() {
         return "Линия от " + start + " до " + end;
     }
